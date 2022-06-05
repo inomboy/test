@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>animation-direction</title>
+  <style>
+   .box {
+    background: #fc0;
+    width: 100px;
+    padding: 20px 0;	
+    text-align: center;
+    position: absolute;
+    animation: move 5s infinite;
+   }
+   .normal {
+    animation-direction: normal;
+    background-color: #141513;
+    color: #e4efc7;
+   }
+   .alternate {
+    top: 100px;
+    animation-direction: alternate;
+    background-color: #121111;
+    color: #e4efc7;
+   }
+   .reverse {
+    top: 200px;
+    animation-direction: reverse;
+    background-color: #050505;
+    color: #e4efc7;
+   }
+   .alternate-reverse {
+    top: 300px;
+    animation-direction: alternate-reverse;
+    color: #e4efc7;
+    background-color: #342e28;
+   }
+   @keyframes move {
+    from { left: 0; }
+    to { left: 100%; transform: translateX(-100px); }
+   }
+  </style>
+ </head>
+ <body>
+  <div class="box normal">2005</div>
+  <div class="box alternate">nima gap</div>
+  <div class="box reverse">hello</div>
+  <div class="box alternate-reverse">good</div>
+ </body>
+</html>
